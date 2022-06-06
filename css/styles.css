@@ -63,7 +63,7 @@ body {
 .tell-list-link:hover,
 .tell-list-link:focus,
 .address-list-link:hover,
-.address-list-link:focus {
+.address-list-link:focus{
     color: var(--accent-color);
 }
 .logo {
@@ -101,7 +101,8 @@ body {
     letter-spacing: 0.03em;
 }
 .team-title,
-.activity-title {
+.activity-title,
+.clients-title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -149,13 +150,32 @@ body {
 .header-phone {
     margin-right: 50px;
 }
+.social-list-links {
+    display: flex;
+    align-items: center;
+}
+.icon-smartphone,
+.icon-mail {
+    margin-right: 10px;
+    fill: rgba(117, 117, 117, 1);;
+}
+.social-list-links:hover .icon-smartphone,
+.social-list-links:focus .icon-smartphone,
+.social-list-links:hover .icon-mail,
+.social-list-links:focus .icon-mail {
+    fill: var(--accent-color);
+}
 /*=========================/HEADER=========================*/
 /*=========================HERO=========================*/
 .hero {
-    background-color: var(--footer-background-color);
-     padding-top: 200px;
-     padding-bottom: 200px;
-     text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_bgimg.jpg);
+    background-size: 1600px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(196, 196, 196, 1);
 }
 .hero-title {
     font-weight: 900;
@@ -220,6 +240,16 @@ body {
 .skils-list-items {
     flex-basis: calc((100%-120)/4);
 }
+.icon-skils-container {
+    margin-bottom: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: rgba(245, 244, 250, 1);
+    border-radius: 4px;
+}
 /*=========================/SKILS=========================*/
 /*=========================ACTIVITY=========================*/
 .activity-title {
@@ -263,6 +293,7 @@ body {
     text-align: center;
     letter-spacing: 0.03em;  
     color: var(--secondary-text-color);
+    margin-bottom: 16px;
 }
 .team-title {
     margin-bottom: 50px;
@@ -277,7 +308,75 @@ body {
     padding-top: 30px;
     padding-bottom: 30px;
 }
+.team-social-list {
+    display: flex;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.team-social-list-items:not(:last-child){
+    margin-right: 10px;
+}
+.team-social-list-items {
+    display: flex;       
+}
+.team-social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+}
+.team-social-list-icons{
+    fill: rgba(175, 177, 184, 1);
+}
+.team-social-list-link:hover .team-social-list-icons,
+.team-social-list-link:focus .team-social-list-icons {
+    fill: var(--thirdty-text-color);
+}
+.team-social-list-link:hover,
+.team-social-list-link:focus {
+    background-color: var(--accent-color);
+}
 /*=========================/TEAM=========================*/
+/*=========================CLIENTS=========================*/
+.clients-title {
+    margin-bottom: 50px;
+}
+.clients-list {
+    display: flex;
+}
+.clients-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+.clients-list-items:not(:last-child) {
+    margin-right: 30px;
+}
+.clients-list-icon {
+    fill: rgba(175, 177, 184, 1);
+}
+.clients-list-link:hover .clients-list-icon,
+.clients-list-link:focus .clients-list-icon {
+    fill: var(--accent-color)  
+}
+.clients-list-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+}
+.clients-list-link:hover,
+.clients-list-link:focus {
+    border-color: var(--accent-color);
+}
+/*=========================/CLIENTS=========================*/
 /*=========================PORTFOLIO=========================*/
 .work-nav-btn {
     font-family: inherit;
@@ -288,18 +387,20 @@ body {
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
     background: var(--secondary-background-color);
-    border-radius: 4px;
     cursor: pointer;
     border-width: 0;
     padding: 6px 22px;
+    border-radius: 4px;
 }
 .work-nav-btn:hover,
 .work-nav-btn:focus {
     color: var(--thirdty-text-color);
     background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .cards-list-items {
     background-color: var(--primary-background-color);
+    display: flex;
 }
 .cards-title {
     font-weight: 700;
@@ -338,6 +439,10 @@ body {
     border: 1px solid #EEEEEE;
     border-top: none;
 }
+.cards-list-link:hover,
+.cards-list-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+} 
 /*=========================/PORTFOLIO=========================*/
 /*=========================FOOTER=========================*/
 .footer {
@@ -359,5 +464,44 @@ body {
 }
 .address-list-items:not(:last-child) {
     margin-bottom: 9px;
+}
+.footer-section {
+    display: flex;
+    align-items: baseline;
+}
+.left-side {
+    margin-right: 70px;
+}
+.join-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--thirdty-text-color);
+    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+.join-list {
+    display: flex;
+}
+.join-list-items:not(:last-child) {
+    margin-right: 10px;
+}
+.join-list-link {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);;
+}
+.join-icon {
+    fill: var(--thirdty-text-color);
+}
+.join-list-link:hover,
+.join-list-link:focus {
+    background-color: var(--accent-color);
 }
 /*=========================/FOOTER=========================*/
